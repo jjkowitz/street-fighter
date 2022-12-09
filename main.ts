@@ -1,5 +1,5 @@
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    controller.moveSprite(mySprite, 0, 100)
+	
 })
 controller.player2.onButtonEvent(ControllerButton.Down, ControllerButtonEvent.Pressed, function () {
 	
