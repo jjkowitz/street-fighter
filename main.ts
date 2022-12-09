@@ -5,24 +5,26 @@ controller.player2.onButtonEvent(ControllerButton.Down, ControllerButtonEvent.Pr
 	
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-	
+    controller.moveSprite(mySprite, 100, 0)
 })
 controller.player2.onButtonEvent(ControllerButton.Up, ControllerButtonEvent.Pressed, function () {
 	
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-	
+    controller.moveSprite(mySprite, 100, 0)
 })
 controller.player2.onButtonEvent(ControllerButton.Right, ControllerButtonEvent.Pressed, function () {
-	
+    controller.moveSprite(mySprite, -100, 0)
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
 	
 })
 controller.player2.onButtonEvent(ControllerButton.Left, ControllerButtonEvent.Pressed, function () {
-	
+    controller.moveSprite(player_2, -100, 0)
 })
-let mySprite = sprites.create(img`
+let player_2: Sprite = null
+let mySprite: Sprite = null
+mySprite = sprites.create(img`
     . . . b b b b b b b b b . . . . 
     . . b 1 d d d d d d d 1 b . . . 
     . b 1 1 1 1 1 1 1 1 1 1 1 b . . 
@@ -40,9 +42,9 @@ let mySprite = sprites.create(img`
     c b b b b b b b b b b b b b c . 
     c c c c c c c c c c c c c c c . 
     `, SpriteKind.Player)
-controller.moveSprite(mySprite, 100, 100)
+controller.moveSprite(mySprite, 100, 0)
 mySprite.setStayInScreen(true)
-let player_2 = sprites.create(img`
+player_2 = sprites.create(img`
     . . . . . . . . . . b 5 b . . . 
     . . . . . . . . . b 5 b . . . . 
     . . . . . . b b b b b b . . . . 
@@ -60,5 +62,5 @@ let player_2 = sprites.create(img`
     . . . . c c d d d 5 5 5 b b . . 
     . . . . . . c c c c c b b . . . 
     `, SpriteKind.Player)
-controller.moveSprite(player_2, 100, 100)
+controller.moveSprite(player_2, 100, 0)
 player_2.setStayInScreen(true)
